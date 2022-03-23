@@ -168,19 +168,19 @@ li.work:hover .product_cover {
 
 /* ▼制作物URL */
 li#work1 {
-  background-image: url("/img/TimeApp.png");
+  background-image: url("https://github.com/kk-gs1943/NewPortfolio/blob/main/img/TimeApp.png?raw=true");
 }
 
 li#work2 {
-  background-image: url("/img/TODOAPP.png");
+  background-image: url("https://github.com/kk-gs1943/NewPortfolio/blob/main/img/TODOAPP.png?raw=true");
 }
 
 li#work3 {
-  background-image: url("/img/StickyNotes.png");
+  background-image: url("https://github.com/kk-gs1943/NewPortfolio/blob/main/img/StickyNotes.png?raw=true");
 }
 
 li#work4 {
-  background-image: url("/img/PORTFOLIO.png");
+  background-image: url("https://github.com/kk-gs1943/NewPortfolio/blob/main/img/PORTFOLIO.png?raw=true");
 }
 
 li#work5 {
@@ -229,19 +229,19 @@ li#work6 {
 
 /* ▼制作物画像 //#work_img1 .work_img */
 #work_img1 {
-  background-image: url("/img/TimeApp.png");
+  background-image: url("https://github.com/kk-gs1943/NewPortfolio/blob/main/img/TimeApp.png?raw=true");
 }
 
 #work_img2 {
-  background-image: url("/img/TODOAPP.png");
+  background-image: url("https://github.com/kk-gs1943/NewPortfolio/blob/main/img/TODOAPP.png?raw=true");
 }
 
 #work_img3 {
-  background-image: url("/img/StickyNotes.png");
+  background-image: url("https://github.com/kk-gs1943/NewPortfolio/blob/main/img/StickyNotes.png?raw=true");
 }
 
 #work_img4 {
-  background-image: url("/img/PORTFOLIO.png");
+  background-image: url("https://github.com/kk-gs1943/NewPortfolio/blob/main/img/PORTFOLIO.png?raw=true");
 }
 
 .work_img {
