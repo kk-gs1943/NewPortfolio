@@ -1,0 +1,557 @@
+* {
+  margin: 0;
+  overflow-y: scroll;
+}
+
+body {
+  width: 100vw;
+  font-family: "Helvetica Neue",
+    Arial,
+    "Hiragino Kaku Gothic ProN",
+    "Hiragino Sans",
+    Meiryo,
+    sans-serif;
+  background-color: #fff;
+  color: black;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+/*-----------------------------------------
+                  ▼ヘッダー
+------------------------------------------*/
+header {
+  background-color: transparent;
+  padding: 1rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, .26);
+}
+
+/* ▼ナビゲーションバー //#bar */
+header#bar {
+  position: relative;
+}
+/* ▲ナビゲーションバー //#bar */
+
+/* ▼GitHubアイコン //#github_icon */
+img#github_icon {
+  width: 1.3rem;
+  height: 1.3rem;
+  position: absolute;
+  top: 1.4rem;
+  left: 1.5rem;
+}
+/* ▲GitHubアイコン //#github_icon */
+
+/* ▼GitHubアイコンタイトル //#github_i_title */
+p#github_i_title {
+  color: black;
+  font-size: 0.5rem;
+  font-weight: bold;
+  position: absolute;
+  top: 2.8rem;
+  left: 1rem;
+}
+/* ▲GitHubアイコンタイトル //#github_i_title */
+
+/* ▼ヘッダーロゴ //.logo */
+h1.logo {
+  font-size: 2rem;
+  text-align: center;
+}
+/* ▲ヘッダーロゴ //.logo */
+
+/* ▼ABOUTリンク //#about_link */
+#about_link {
+  cursor: pointer;
+}
+/* ▲ABOUTリンク //#about_link */
+
+/* ▼GitHub, ABOUTアイコン //.material-icons-outlined */
+header span {
+  position: absolute;
+  width: 1.5rem;
+  height: 1.5rem;
+  top: 1.3rem;
+  right: 1.45rem;
+}
+/* ▲GitHub,ABOUTアイコン //.material-icons-outlined */
+
+/* ▼GitHub, ABOUTアイコンタイトル //#about_i_title */
+header p#about_i_title {
+  color: black;
+  font-weight: bold;
+  position: absolute;
+  top: 2.8rem;
+  right: 1rem;
+  font-size: 0.5rem;
+}
+/* ▲GitHub, ABOUTアイコンタイトル //#about_i_title */
+
+/*-----------------------------------------
+                  ▲ヘッダー
+------------------------------------------*/
+
+/*-----------------------------------------
+                  ▼メイン
+------------------------------------------*/
+
+/* ▼メインロゴ //.logo */
+h2.logo {
+  text-align: center;
+  margin-top: 30px;
+  font-size: 1.3rem;
+}
+/* ▲メインロゴ //.logo */
+
+/* ▼制作物一覧 //.work_list */
+ul.work_list {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  padding: 20px 0;
+}
+/* ▲制作物一覧 //.work_list */
+
+/* ▼制作物 //.work */
+li.work {
+  width: 15rem;
+  height: 12rem;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, .2);
+  margin: 0 1rem;
+  border-radius: 5px;
+  position: relative;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: 0px 45%;
+  background-color: black;
+}
+/* ▲制作物 //.work */
+
+/* ▼制作物ホバー時 //.work:hover */
+li.work:hover {
+  cursor: pointer;
+  box-shadow: none;
+  color: #fff;
+}
+/* ▲制作物ホバー時 //.work:hover */
+
+/* ▼ホバー時に出現する要素 //.product_cover */
+.product_cover {
+  opacity: 0;
+  background-color: rgba(0, 0, 0, .4);
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+  position: relative;
+}
+
+li.work:hover .product_cover {
+  opacity: 1;
+}
+/* ▲ホバー時に出現する要素 //.product_cover */
+
+/* ▼制作物タイトル //.product_title */
+.product_title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  position: absolute;
+  top: 38%;
+  width: 100%;
+}
+/* ▲制作物タイトル //.product_title */
+
+/* ▼制作物URL */
+li#work1 {
+  background-image: url("/img/TimeApp.png");
+}
+
+li#work2 {
+  background-image: url("/img/TODOAPP.png");
+}
+
+li#work3 {
+  background-image: url("/img/StickyNotes.png");
+}
+
+li#work4 {
+  background-image: url("/img/PORTFOLIO.png");
+}
+
+li#work5 {
+  background-image: url("https://source.unsplash.com/400x300/?city");
+}
+
+li#work6 {
+  background-image: url("https://source.unsplash.com/400x300/?sea");
+}
+/* ▲制作物URL */
+
+/* ▼制作物詳細 //.work_container */
+
+/* ▼閉じるボタン //.cls */
+.cls {
+  display: none;
+  color: #fff;
+  position: fixed;
+  top: 1.5rem;
+  right: 1rem;
+  z-index: 100;
+  background-color: transparent;
+  border: none;
+}
+
+.cls_active {
+  display: block;
+}
+/* ▲閉じるボタン //.cls */
+
+/* ▼制作物内容 //.work_content */
+.work_content {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, .8);
+}
+
+.work_content.active {
+  display: block;
+}
+/* ▲制作物内容 //.work_content */
+
+/* ▼制作物画像 //#work_img1 .work_img */
+#work_img1 {
+  background-image: url("/img/TimeApp.png");
+}
+
+#work_img2 {
+  background-image: url("/img/TODOAPP.png");
+}
+
+#work_img3 {
+  background-image: url("/img/StickyNotes.png");
+}
+
+#work_img4 {
+  background-image: url("/img/PORTFOLIO.png");
+}
+
+.work_img {
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 25rem;
+  height: 16rem;
+  margin: 4rem auto 1rem;
+}
+/* ▲制作物画像 //#work_img1 .work_img */
+
+/* ▼制作物タイトル //.w_c_title */
+.w_c_title {
+  font-weight: bold;
+  text-align: center;
+  color: #fff;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+/* ▲制作物タイトル //.w_c_title */
+
+/* ▼制作物テキスト //.content_text */
+.content_text {
+  text-align: center;
+  background-color: #fff;
+  margin: 0 auto 1rem;
+  border-radius: 5px;
+  width: 80vw;
+}
+
+.d_text {
+  text-align: left;
+}
+/* ▲制作物テキスト //.content_text */
+
+/* ▼リンク //.link */
+.link {
+  font-weight: bold;
+  color: #fff;
+  text-align: center;
+  padding-bottom: 0.5rem;
+}
+
+.link a {
+  color: aqua;
+  padding-left: 1rem;
+}
+/* ▲リンク //.link */
+
+/*-----------------------------------------
+                  ▲メイン
+------------------------------------------*/
+
+/*-----------------------------------------
+                  ▼フッター
+------------------------------------------*/
+footer {
+  text-align: center;
+  padding-top: 20px;
+  color: rgba(0, 0, 0, .5);
+  font-size: 0.5rem;
+}
+/*-----------------------------------------
+                  ▲フッター
+------------------------------------------*/
+
+/*-----------------------------------------
+          ▼ABOUTページ prof.innerHTML
+------------------------------------------*/
+
+/* ▼ABOUTページ */
+.prof {
+  width: 100vw;
+  height: 100vh;
+  background-color: aqua;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+/* ▲ABOUTページ */
+
+/* ▼ABOUTロゴ //.logo */
+p.logo {
+  text-align: center;
+  position: relative;
+  margin: 1rem 0;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+/* ▲ABOUTロゴ //.logo */
+
+/* ▼ABOUTを閉じるボタン //.close */
+button.close {
+  position: absolute;
+  top: 1.5rem;
+  right: 1rem;
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+}
+/* ▲ABOUTを閉じるボタン //.close */
+
+/* ▼ABOUTテキスト */
+table#info, table#skill {
+  text-align: center;
+  margin: 1rem auto;
+  background-color: #fff;
+  padding: 0.5rem;
+  border-radius: 5px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, .2);
+  width: 80vw;
+}
+
+#title {
+  text-align: center;
+  font-weight: bold;
+}
+
+td {
+  padding: 0.5rem 1.2rem;
+}
+
+.d_name {
+  font-weight: bold;
+}
+/* ▲ABOUTテキスト */
+
+/* ▼ABOUTページのGitHubリンク */
+img#github_icon_prof {
+  width: 1.3rem;
+  height: 1.3rem;
+  position: absolute;
+  top: 1.4rem;
+  left: 1.5rem;
+}
+
+p#github_i_title_prof {
+  color: black;
+  font-size: 0.5rem;
+  font-weight: bold;
+  position: absolute;
+  top: 2.8rem;
+  left: 1rem;
+}
+/* ▲ABOUTページのGitHubリンク */
+
+/*-----------------------------------------
+          ▲ABOUTページ prof.innerHTML
+------------------------------------------*/
+
+/*-----------------------------------------
+                  ▼メディアクエリ
+------------------------------------------*/
+
+/* ▼max-width: 960px */
+@media screen and (max-width: 960px) {
+
+  /* ▼制作物一覧 //.work_list */
+  ul.work_list {
+    padding: 40px 0;
+  }
+  /* ▲制作物一覧 //.work_list */
+
+  /* ▼制作物 //.work */
+  li.work {
+    width: 10rem;
+    height: 8rem;
+    margin: 0 0.5rem;
+  }
+  /* ▲制作物 //.work */
+
+  /* ▼ABOUTテキスト */
+  table#info, table#skill {
+    font-size: 13px;
+  }
+  /* ▲ABOUTテキスト */
+
+}
+/* ▲max-width: 960px */
+
+/* ▼max-width: 520px */
+@media screen and (max-width: 520px) {
+
+  /* ▼ヘッダーロゴ //.logo */
+  h1.logo {
+    font-size: 1.5rem;
+    text-align: left;
+  }
+  /* ▲ヘッダーロゴ //.logo */
+  
+  /* ▼GitHubアイコン, GitHubアイコンタイトル //#github_con, #github_i_title */
+  #github_icon, #github_i_title {
+    display: none;
+  }
+  /* ▲GitHubアイコン, GitHubアイコンタイトル //#github_con, #github_i_title */
+  
+  /* ▼ABOUTアイコン */
+  header span {
+    height: 1.3rem;
+    top: 1.2rem;
+  }
+  /* ▲ABOUTアイコン */
+  
+  /* ▼ABOUTアイコンタイトル //#about_i_title */
+  header p#about_i_title {
+    top: 2.7rem;
+  }
+  /* ▲ABOUTアイコンタイトル //#about_i_title */
+
+  /* ▼制作物一覧 //.work_list */
+  ul.work_list {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 1rem;
+  }
+  /* ▲制作物一覧 //.work_list */
+
+  /* ▼制作物 //.work */
+  li.work {
+    margin: 1rem 0;
+    width: 17rem;
+    height: 12.75rem;
+  }
+  /* ▲制作物 //.work */
+
+  /* ▼制作物画像 //.work_img */
+  .work_img {
+    width: 20rem;
+    height: 12.7rem;
+  }
+  /* ▲制作物画像 //.work_img */
+
+  /* ▼制作物タイトル //.w_c_title */
+  .w_c_title {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+  }
+  /* ▲制作物タイトル //.w_c_title */
+
+  /* ▼制作物テキスト //.content_text */
+  .content_text {
+    font-size: 0.5rem;
+  }
+  /* ▲制作物テキスト //.content_text */
+
+  /* ▼リンク //.link */
+  .link {
+    font-size: 0.8rem;
+  }
+  /* ▲リンク //.link */
+
+  /* ▼ABOUTテキスト */
+  table#info, table#skill {
+    font-size: 0.8rem;
+  }
+  /* ▲ABOUTテキスト */
+
+}
+/* ▲max-width: 520px */
+
+/* ▼max-width: 280px */
+@media screen and (max-width: 280px) {
+
+  /* ▼閉じるボタン //.cls */
+  .cls {
+    top: 0.5rem;
+    right: 0;
+  }
+  /* ▲閉じるボタン //.cls */
+
+  /* ▼制作物画像 //.work_img */
+  .work_img {
+    width: 16rem;
+    height: 10rem;
+    margin-top: 2rem;
+  }
+  /* ▲制作物画像 //.work_img */
+
+  /* ▼制作物タイトル //.w_c_title */
+  .w_c_title {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+  }
+  /* ▲制作物タイトル //.w_c_title */
+
+  /* ▼制作物テキスト //.content_text */
+  .content_text {
+    font-size: 0.1rem;
+  }
+  /* ▲制作物テキスト //.content_text */
+
+  /* ▼リンク //.link */
+  .link {
+    font-size: 0.1rem;
+  }
+  /* ▲リンク //.link */
+
+  /* ▼ABOUTテキスト */
+  table#info, table#skill {
+    font-size: 0.5rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+  }
+  /* ▲ABOUTテキスト */
+
+}
+/* ▲max-width: 280px */
+
+/*-----------------------------------------
+                  ▲メディアクエリ
+------------------------------------------*/
+
