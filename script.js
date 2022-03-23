@@ -19,7 +19,7 @@ function addProf() {
 
     <!-- ▼ABOUTロゴ //.logo -->
     <p class="logo">ABOUT</p>
-    <!-- ▼ABOUTロゴ //.logo -->
+    <!-- ▲ABOUTロゴ //.logo -->
 
     <!-- ▼ABOUTを閉じるボタン //.close -->
     <button class="close">
@@ -85,7 +85,7 @@ function addProf() {
 
     <!-- ▼GitHubリンク -->
     <a href="https://github.com/kk-gs1943">
-      <img id="github_icon_prof" src="/img/GitHub-Mark.png" alt="">
+      <img id="github_icon_prof" src="https://github.com/kk-gs1943/NewPortfolio/blob/main/img/GitHub-Mark.png?raw=true" alt="">
       <p id="github_i_title_prof">GitHub</p>
     </a>
     <!-- ▲GitHubリンク -->
